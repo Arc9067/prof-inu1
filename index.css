@@ -1,0 +1,244 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+body .main {
+  height: 100vh;
+  width: 100%;
+  background-color: #24130C;
+  overflow: hidden;
+}
+body .main main#carousel {
+  grid-row: 1/2;
+  grid-column: 1/8;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 600px;
+  --items: 5;
+  --middle: 3;
+  --position: 1;
+  pointer-events: none;
+}
+body .main div.item {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  background-color: red;
+  --r: calc(var(--position) - var(--offset));
+  --abs: max(calc(var(--r) * -1), var(--r));
+  transition: all 0.25s linear;
+  transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-300px * var(--r)));
+  z-index: calc(var(--position) - var(--abs));
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+body .main div.item .main-tem {
+  height: 45%;
+  width: 100%;
+}
+body .main div.item .main-tem h3 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+body .main div.item .main-tem p {
+  font-size: 14px;
+  text-align: center;
+}
+body .main div.item:nth-of-type(1) {
+  --offset: 1;
+  background-color: #FFB329;
+  -webkit-animation-name: itm1;
+          animation-name: itm1;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+body .main div.item:nth-of-type(1) .main-tem:nth-child(1) {
+  background: url(./img/Asset\ 5@4x.png);
+  background-size: 85%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body .main div.item:nth-of-type(2) {
+  --offset: 2;
+  background-color: #C28384;
+  -webkit-animation-name: itm2;
+          animation-name: itm2;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+body .main div.item:nth-of-type(2) .main-tem:nth-child(2) {
+  width: 100%;
+}
+body .main div.item:nth-of-type(2) .main-tem:nth-child(2) ul {
+  height: 100%;
+  width: 100%;
+}
+body .main div.item:nth-of-type(2) .main-tem:nth-child(2) ul li {
+  margin-left: 20px;
+  list-style: none;
+  padding-bottom: 10px;
+}
+body .main div.item:nth-of-type(2) .main-tem:nth-child(2) ul li i {
+  padding: 10px;
+  background-color: #24130C;
+  border-radius: 20px;
+  color: white;
+}
+@-webkit-keyframes itm2 {
+  50% {
+    background-color: black;
+    color: white;
+  }
+}
+@keyframes itm2 {
+  50% {
+    background-color: black;
+    color: white;
+  }
+}
+body .main div.item:nth-of-type(2) .main-tem:nth-child(1) {
+  background: url(./img/Asset\ 6@4x.png);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body .main div.item:nth-of-type(3) {
+  --offset: 3;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
+}
+body .main div.item:nth-of-type(3) ul {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+body .main div.item:nth-of-type(3) ul li {
+  font-size: 11px;
+  margin-left: 5px;
+  list-style: none;
+}
+body .main div.item:nth-of-type(4) {
+  --offset: 4;
+  background-color: #000;
+}
+body .main div.item:nth-of-type(4) .main-tem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .main div.item:nth-of-type(4) .main-tem:nth-child(1) {
+  background: url(./img/Asset\ 8@4x.png);
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: center;
+}
+body .main div.item:nth-of-type(4) .btn {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .main div.item:nth-of-type(4) .btn button {
+  width: 40%;
+  height: 80%;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+body .main div.item:nth-of-type(4) .btn button a {
+  text-decoration: none;
+  color: black;
+}
+body .main div.item:nth-of-type(4) .links {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .main div.item:nth-of-type(4) .links a {
+  text-decoration: none;
+  color: white;
+}
+body .main div.item:nth-of-type(4) .links a i {
+  font-size: 35px;
+}
+body .main div.item:nth-of-type(5) {
+  --offset: 5;
+  background-color: #CD8A24;
+}
+@-webkit-keyframes itm1 {
+  50% {
+    background-color: white;
+  }
+}
+@keyframes itm1 {
+  50% {
+    background-color: white;
+  }
+}
+body .main input:nth-of-type(1) {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  justify-self: center;
+}
+body .main input:nth-of-type(1):checked ~ main#carousel {
+  --position: 1;
+}
+body .main input:nth-of-type(2) {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+body .main input:nth-of-type(2):checked ~ main#carousel {
+  --position: 2;
+}
+body .main input:nth-of-type(3) {
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+body .main input:nth-of-type(3):checked ~ main#carousel {
+  --position: 3;
+}
+body .main input:nth-of-type(4) {
+  grid-column: 5/6;
+  grid-row: 2/3;
+}
+body .main input:nth-of-type(4):checked ~ main#carousel {
+  --position: 4;
+}
+body .main input:nth-of-type(5) {
+  grid-column: 6/7;
+  grid-row: 2/3;
+}
+body .main input:nth-of-type(5):checked ~ main#carousel {
+  --position: 5;
+}/*# sourceMappingURL=index.css.map */
