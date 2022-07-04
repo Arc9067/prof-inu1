@@ -32,7 +32,7 @@ body .main main#carousel {
 body .main div.item {
   position: absolute;
   width: 300px;
-  height: 400px;
+  height: 450px;
   background-color: red;
   --r: calc(var(--position) - var(--offset));
   --abs: max(calc(var(--r) * -1), var(--r));
